@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andres Rios — Data Analyst</title>
+<meta name="description" content="Andres Rios, data analyst in Colombia. Dashboards, pipelines, and tools built from raw government data — Statistics on Colombia, statsco.ai, and more.">
+<meta property="og:title" content="Andres Rios — Data Analyst">
+<meta property="og:description" content="Dashboards, pipelines, and tools built from raw government data.">
+<meta property="og:type" content="website">
+<link rel="alternate" hreflang="es" href="/es/">
+<style>
+/* Hallmark · macrostructure: Portfolio Grid (flagship break + dense secondary list) · genre: editorial (terminal cluster)
+ * nav: N8 Terminal command · footer: Ft4 Dense colophon · theme: Terminal (amber/teal, OKLCH)
+ * tone: technical/terminal-authentic · differs from generic AI-nav/uniform-card baseline on: nav archetype, card hierarchy, token format
+ */
+:root {
+  --ink: oklch(96% 0.01 90);
+  --surface: oklch(98% 0.006 90);
+  --surface-2: oklch(93% 0.012 90);
+  --border: oklch(85% 0.014 90);
+  --text: oklch(20% 0.01 100);
+  --muted: oklch(45% 0.015 120);
+  --amber: oklch(58% 0.15 55);
+  --teal: oklch(45% 0.09 165);
+  --skill: oklch(50% 0.13 275);
+  --shadow: 0 1px 0 oklch(20% 0.01 100 / 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: oklch(27% 0.02 250);
+    --surface: oklch(33% 0.02 250);
+    --surface-2: oklch(40% 0.025 250);
+    --border: oklch(47% 0.03 250);
+    --text: oklch(97% 0.008 90);
+    --muted: oklch(82% 0.02 240);
+    --amber: oklch(83% 0.14 60);
+    --teal: oklch(75% 0.12 165);
+    --skill: oklch(78% 0.12 275);
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: oklch(27% 0.02 250); --surface: oklch(33% 0.02 250); --surface-2: oklch(40% 0.025 250);
+  --border: oklch(47% 0.03 250); --text: oklch(97% 0.008 90); --muted: oklch(82% 0.02 240);
+  --amber: oklch(83% 0.14 60); --teal: oklch(75% 0.12 165); --skill: oklch(78% 0.12 275); --shadow: none;
+}
+:root[data-theme="light"] {
+  --ink: oklch(96% 0.01 90); --surface: oklch(98% 0.006 90); --surface-2: oklch(93% 0.012 90);
+  --border: oklch(85% 0.014 90); --text: oklch(20% 0.01 100); --muted: oklch(45% 0.015 120);
+  --amber: oklch(58% 0.15 55); --teal: oklch(45% 0.09 165); --skill: oklch(50% 0.13 275); --shadow: 0 1px 0 oklch(20% 0.01 100 / 0.06);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: clip; background: var(--ink); color: var(--text);
+  font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; line-height: 1.6; }
+::selection { background: var(--amber); color: var(--ink); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.mono { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 96px; }
+
+/* ---------- N8 terminal-command nav ---------- */
+.termnav {
+  max-width: 760px; margin: 0 auto; padding: 24px 24px 0;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 13px; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap;
+}
+.termnav .sigil { color: var(--teal); }
+.termnav .who { color: var(--text); }
+.termnav a.flag { color: var(--muted); text-decoration: none; margin-left: 2px; }
+.termnav a.flag:hover, .termnav a.flag:focus-visible { color: var(--amber); }
+.termnav .cursor { display: inline-block; width: 0.55em; background: var(--amber); color: transparent; animation: blink 1.1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { .termnav .cursor { animation: none; } }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- hero ---------- */
+.hero { padding: 56px 0 40px; }
+.prompt-line { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+.prompt-line .sigil { color: var(--teal); }
+.prompt-line .cmd { color: var(--text); }
+h1 { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 600;
+  font-size: clamp(28px, 5vw, 42px); line-height: 1.15; margin: 0 0 18px; text-wrap: balance;
+  letter-spacing: -0.01em; overflow-wrap: anywhere; min-width: 0; }
+h1 .cursor { display: inline-block; width: 0.5em; background: var(--amber); color: transparent; animation: blink 1.1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce) { h1 .cursor { animation: none; opacity: 1; } }
+.hero p { max-width: 58ch; color: var(--muted); font-size: 17px; margin: 0 0 28px; }
+.hero p strong { color: var(--text); font-weight: 600; }
+.hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px;
+  text-decoration: none; padding: 9px 14px; border-radius: 3px; border: 1px solid var(--border);
+  color: var(--text); white-space: nowrap; transition: border-color .15s ease, color .15s ease; }
+.btn:hover, .btn:focus-visible { border-color: var(--amber); color: var(--amber); }
+.btn.primary { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+.btn.primary:hover { color: var(--ink); opacity: 0.88; border-color: var(--amber); }
+
+/* ---------- readout ---------- */
+.readout { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 40px 0 8px; }
+.readout div { background: var(--surface); padding: 14px 16px; }
+.readout .n { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; font-size: 22px; color: var(--amber); }
+.readout .l { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: 4px; }
+@media (max-width: 560px) { .readout { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+/* ---------- section chrome ---------- */
+section { margin-top: 64px; }
+.tag { display: block; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 12px; color: var(--teal); margin-bottom: 14px; }
+.tag::before { content: "# "; color: var(--muted); }
+
+/* ---------- flagship card ---------- */
+.flagship { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 26px 26px 24px; box-shadow: var(--shadow); margin-bottom: 22px; }
+.flagship-head { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; justify-content: space-between; }
+.flagship-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.flagship-brand svg { height: 34px; width: auto; flex-shrink: 0; }
+.flagship-brand .fb-text { display: flex; flex-direction: column; min-width: 0; }
+.flagship-brand h3 { margin: 0; font-size: 19px; font-weight: 600; overflow-wrap: anywhere; }
+.flagship-brand h3 a { text-decoration: none; }
+.flagship-brand h3 a:hover { color: var(--amber); }
+.flagship-brand .sub { font-size: 12.5px; color: var(--muted); }
+.status { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 10.5px;
+  text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 20px; white-space: nowrap; border: 1px solid transparent; flex-shrink: 0; }
+.status.live { color: var(--teal); border-color: var(--teal); background: color-mix(in srgb, var(--teal) 12%, transparent); }
+.status.building { color: var(--amber); border-color: var(--amber); background: color-mix(in srgb, var(--amber) 12%, transparent); }
+.status.maintained { color: var(--muted); border-color: var(--border); }
+.flagship p.desc { margin: 16px 0 12px; color: var(--muted); font-size: 14.5px; max-width: 62ch; }
+.proof-line { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 12.5px; color: var(--text);
+  border-left: 2px solid var(--teal); padding-left: 10px; margin: 0 0 16px; }
+.proof-line span { color: var(--muted); }
+.proof-line a { color: var(--teal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--teal) 45%, transparent); }
+.proof-line a:hover, .proof-line a:focus-visible { border-bottom-color: var(--teal); }
+.flagship .meta { display: flex; flex-direction: column; gap: 10px; }
+.stack { display: flex; gap: 8px; flex-wrap: wrap; }
+.stack span { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; color: var(--ink); background: var(--skill); border-radius: 3px; padding: 3px 7px; }
+.go { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 12.5px; text-decoration: none; color: var(--amber); white-space: nowrap; }
+.go:hover { text-decoration: underline; }
+
+/* ---------- secondary dense list ---------- */
+.worklist { border-top: 1px solid var(--border); }
+.wrow { display: flex; flex-direction: column; gap: 8px; padding: 16px 4px; border-bottom: 1px solid var(--border); }
+.wrow .wname { display: flex; align-items: center; gap: 8px; min-width: 0; flex-wrap: wrap; }
+.wrow .wname strong { font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+.wrow .wdesc { color: var(--muted); font-size: 13.5px; max-width: 62ch; }
+.wrow .wfoot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.wrow .stack span { font-size: 10.5px; }
+
+/* ---------- about ---------- */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width: 560px) { .about-grid { grid-template-columns: 1fr; } }
+dl.kv { margin: 0; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 8px 16px; font-size: 14.5px; }
+dl.kv dt { font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; color: var(--muted); font-size: 13px; }
+dl.kv dd { margin: 0; overflow-wrap: anywhere; }
+.barlist { display: flex; flex-direction: column; gap: 9px; }
+.barlist .row { display: flex; align-items: center; gap: 10px; }
+.barlist .label { width: 92px; font-size: 13px; flex-shrink: 0; }
+.barlist .track { flex: 1; height: 8px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.barlist .fill { height: 100%; background: var(--amber); border-radius: 3px; }
+.barlist .pct { width: 38px; text-align: right; font-family: ui-monospace, monospace; font-size: 12.5px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+ul.plain { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 7px; font-size: 14.5px; color: var(--muted); }
+ul.plain li::before { content: "· "; color: var(--amber); }
+
+/* ---------- Ft4 dense colophon footer ---------- */
+footer.colophon { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--border);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 12px; color: var(--muted); line-height: 1.8; }
+footer.colophon a { text-decoration: none; color: var(--muted); }
+footer.colophon a:hover { color: var(--amber); }
+footer.colophon .line { display: block; }
+footer.colophon .accent { color: var(--text); }
+</style>
+</head>
+<body>
+<script>
+if (!localStorage.getItem('lang') && navigator.language.slice(0,2) === 'es') {
+  location.replace('/es/');
+}
+</script>
+
+<nav class="termnav mono">
+  <span class="sigil">~</span><span class="who">/andres_rios</span>
+  <a class="flag" href="#work">--work</a>
+  <a class="flag" href="#about">--about</a>
+  <a class="flag" href="#contact">--contact</a>
+  <span class="cursor" aria-hidden="true">▮</span>
+</nav>
+
+<div class="wrap">
+
+  <section class="hero">
+    <p class="prompt-line"><span class="sigil">~</span> <span class="cmd">whoami</span></p>
+    <h1>Andres Rios — data analyst, Colombia.<span class="cursor" aria-hidden="true">_</span></h1>
+    <p>I turn messy government spreadsheets and API dumps into <strong>dashboards, pipelines, and tools people actually keep open</strong>. Everything below is built from scratch — no templates, no boilerplate SaaS starter.</p>
+    <div class="hero-links">
+      <a class="btn primary" href="mailto:riosandres294@proton.me">Email me</a>
+      <a class="btn" href="https://github.com/Andres-pixel35">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/andres-rios-5670373b0/">LinkedIn ↗</a>
+      <a class="btn" href="#work">See the work ↓</a>
+    </div>
+    <div class="readout">
+      <div><div class="n mono">7</div><div class="l">shipped projects</div></div>
+      <div><div class="n mono">4</div><div class="l">languages</div></div>
+      <div><div class="n mono">2</div><div class="l">live dashboards</div></div>
+      <div><div class="n mono">1</div><div class="l">in build: statsco.ai</div></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <span class="tag">work</span>
+
+    <article class="flagship">
+      <div class="flagship-head">
+        <div class="flagship-brand">
+          <svg viewBox="0 0 148 145" role="img" aria-label="Statistics Colombia logo">
+            <text x="34" y="121" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#173B6D">C</text>
+            <text x="0" y="113" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#4F82D8">S</text>
+          </svg>
+          <div class="fb-text">
+            <h3><a href="https://github.com/Andres-pixel35/Statistics_on_Colombia">Statistics on Colombia</a></h3>
+            <span class="sub">the flagship, live, still growing</span>
+          </div>
+        </div>
+        <span class="status live">Live</span>
+      </div>
+      <p class="desc">A bilingual Streamlit dashboard unifying GDP, CPI, poverty, migration, and population data straight from raw DANE / Banco de la República / World Bank workbooks — custom ETL cleans each domain, then a shared Plotly layer renders comparisons across presidential terms.</p>
+      <p class="proof-line mono"><span>live →</span> <a href="https://statisticsoncolombia.streamlit.app" target="_blank" rel="noopener">statisticsoncolombia</a> <span> · brand:</span> <a href="https://www.instagram.com/statisticscolombia/" target="_blank" rel="noopener">@statisticscolombia</a></p>
+      <div class="meta">
+        <div class="stack"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
+        <a class="go" href="https://github.com/Andres-pixel35/Statistics_on_Colombia">repo →</a>
+      </div>
+    </article>
+
+    <div class="worklist">
+      <div class="wrow">
+        <div class="wname mono"><strong>statsco.ai</strong><span class="status building">Building</span></div>
+        <div class="wdesc">RAG assistant answering questions about Colombian statistics in plain language, grounded in the same government datasets — no hallucinated numbers.</div>
+        <div class="wfoot"><div class="stack"><span>Python</span><span>RAG</span><span>Vector DB</span></div></div>
+      </div>
+      <div class="wrow">
+        <div class="wname mono"><strong>Anime Dashboard</strong><span class="status maintained">Maintained</span></div>
+        <div class="wdesc">Two-phase record-linkage engine (exact hash, then fuzzy fallback via rapidfuzz) reconciles watch history against a historical anime DB, then a Streamlit view breaks down time watched, scores, and genres.</div>
+        <div class="wfoot"><div class="stack"><span>Python</span><span>rapidfuzz</span><span>Bash</span></div><a class="go" href="https://github.com/Andres-pixel35/Anime-dashboard">repo →</a></div>
+      </div>
+      <div class="wrow">
+        <div class="wname mono"><strong>DebtTracker</strong><span class="status maintained">CLI</span></div>
+        <div class="wdesc">Derives implied interest rate from principal/payment/term, simulates early payoff and higher-payment what-ifs under the French annuity system.</div>
+        <div class="wfoot"><div class="stack"><span>Python</span><span>numpy_financial</span></div><a class="go" href="https://github.com/Andres-pixel35/DebtTracker">repo →</a></div>
+      </div>
+      <div class="wrow">
+        <div class="wname mono"><strong>Isekai Growth Analysis</strong><span class="status maintained">Report</span></div>
+        <div class="wdesc">Tested a genre-saturation hypothesis against 60 years of anime/light-novel data: CAGR, IQR outlier detection, a lagged correlation between light-novel and isekai anime releases — full written methodology + limitations section.</div>
+        <div class="wfoot"><div class="stack"><span>Pandas</span><span>NumPy</span><span>Jupyter</span></div><a class="go" href="https://github.com/Andres-pixel35/isekai-growth-analysis">repo →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <span class="tag">about</span>
+    <div class="about-grid">
+      <div>
+        <dl class="kv">
+          <dt>base</dt><dd>Colombia</dd>
+          <dt>role</dt><dd>Data Analyst</dd>
+          <dt>setup</dt><dd>Arch Linux + Hyprland, btw</dd>
+          <dt>studying</dt><dd>Chinese (HSK 1)</dd>
+        </dl>
+        <ul class="plain">
+          <li>Terminal Enjoyer.</li>
+          <li>Watches enough anime that it's the subject of two side projects.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="barlist">
+          <div class="row"><span class="label mono">Spanish</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="pct">C2</span></div>
+          <div class="row"><span class="label mono">English</span><span class="track"><span class="fill" style="width:78%"></span></span><span class="pct">C1</span></div>
+          <div class="row"><span class="label mono">Chinese</span><span class="track"><span class="fill" style="width:18%"></span></span><span class="pct">HSK1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="colophon" id="contact">
+    <span class="line"><span class="accent">Andres Rios</span> — there is no point building just for the sake of building.</span>
+    <span class="line"><a href="mailto:riosandres294@proton.me">riosandres294@proton.me</a> · <a href="https://github.com/Andres-pixel35">github.com/Andres-pixel35</a> · <a href="https://www.linkedin.com/in/andres-rios-5670373b0/">linkedin</a> · <a href="/es/">español</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
