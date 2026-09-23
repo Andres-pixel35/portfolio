@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andres Rios — Data Analyst</title>
-<meta name="description" content="Andres Rios, data analyst in Colombia. Dashboards, pipelines, and tools built from raw government data — Statistics on Colombia, statsco.ai, and more.">
+<meta name="description" content="Andres Rios, data analyst in Colombia. Dashboards, pipelines, and tools built from raw government data — StatsCo AI, Statistics on Colombia, and more.">
 <meta property="og:title" content="Andres Rios — Data Analyst">
 <meta property="og:description" content="Dashboards, pipelines, and tools built from raw government data.">
 <meta property="og:type" content="website">
@@ -196,10 +196,10 @@ if (!localStorage.getItem('lang') && navigator.language.slice(0,2) === 'es') {
       <a class="btn" href="#work">See the work ↓</a>
     </div>
     <div class="readout">
-      <div><div class="n mono">7</div><div class="l">shipped projects</div></div>
+      <div><div class="n mono">8</div><div class="l">shipped projects</div></div>
       <div><div class="n mono">4</div><div class="l">languages</div></div>
-      <div><div class="n mono">2</div><div class="l">live dashboards</div></div>
-      <div><div class="n mono">1</div><div class="l">in build: statsco.ai</div></div>
+      <div><div class="n mono">3</div><div class="l">live apps</div></div>
+      <div><div class="n mono">1</div><div class="l">AI app: StatsCo AI</div></div>
     </div>
   </section>
 
@@ -209,30 +209,30 @@ if (!localStorage.getItem('lang') && navigator.language.slice(0,2) === 'es') {
     <article class="flagship">
       <div class="flagship-head">
         <div class="flagship-brand">
-          <svg viewBox="0 0 148 145" role="img" aria-label="Statistics Colombia logo">
+          <svg viewBox="0 0 148 145" role="img" aria-label="StatsCo AI logo">
             <text x="34" y="121" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#173B6D">C</text>
             <text x="0" y="113" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#4F82D8">S</text>
           </svg>
           <div class="fb-text">
-            <h3><a href="https://github.com/Andres-pixel35/Statistics_on_Colombia">Statistics on Colombia</a></h3>
-            <span class="sub">the flagship, live, still growing</span>
+            <h3><a href="https://statscoai.streamlit.app/">StatsCo AI</a></h3>
+            <span class="sub">ask Colombia's official statistics in plain language</span>
           </div>
         </div>
         <span class="status live">Live</span>
       </div>
-      <p class="desc">A bilingual Streamlit dashboard unifying GDP, CPI, poverty, migration, and population data straight from raw DANE / Banco de la República / World Bank workbooks — custom ETL cleans each domain, then a shared Plotly layer renders comparisons across presidential terms.</p>
-      <p class="proof-line mono"><span>live →</span> <a href="https://statisticsoncolombia.streamlit.app" target="_blank" rel="noopener">statisticsoncolombia</a> <span> · brand:</span> <a href="https://www.instagram.com/statisticscolombia/" target="_blank" rel="noopener">@statisticscolombia</a></p>
+      <p class="desc">A bilingual chat app: ask <em>“What was the unemployment rate in Antioquia in 2023?”</em> and it answers with the number and its sources. An LLM gate filters the question, sentence embeddings pick the right tables, then the model writes SQL that runs read-only against a 1.8 GB SQLite database — retrying on failure — and replies in text, or as a Plotly chart / department map on request.</p>
+      <p class="proof-line mono"><span>live →</span> <a href="https://statscoai.streamlit.app/" target="_blank" rel="noopener">statscoai</a> <span> · data: DANE, Banco de la República, MinHacienda, World Bank</span></p>
       <div class="meta">
-        <div class="stack"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
-        <a class="go" href="https://github.com/Andres-pixel35/Statistics_on_Colombia">repo →</a>
+        <div class="stack"><span>Python</span><span>LLM</span><span>Text-to-SQL</span><span>sentence-transformers</span><span>SQLite</span><span>Streamlit</span><span>Plotly</span></div>
+        <a class="go" href="https://github.com/Andres-pixel35/statsco-ai">repo →</a>
       </div>
     </article>
 
     <div class="worklist">
       <div class="wrow">
-        <div class="wname mono"><strong>statsco.ai</strong><span class="status building">Building</span></div>
-        <div class="wdesc">RAG assistant answering questions about Colombian statistics in plain language, grounded in the same government datasets — no hallucinated numbers.</div>
-        <div class="wfoot"><div class="stack"><span>Python</span><span>RAG</span><span>Vector DB</span></div></div>
+        <div class="wname mono"><strong>Statistics on Colombia</strong><span class="status live">Live</span></div>
+        <div class="wdesc">A bilingual Streamlit dashboard unifying GDP, CPI, poverty, migration, and population data straight from raw DANE / Banco de la República / World Bank workbooks — custom ETL cleans each domain, then a shared Plotly layer renders comparisons across presidential terms.</div>
+        <div class="wfoot"><div class="stack"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div><span><a class="go" href="https://statisticsoncolombia.streamlit.app" target="_blank" rel="noopener">live →</a> <a class="go" href="https://www.instagram.com/statisticscolombia/" target="_blank" rel="noopener">@statisticscolombia</a> <a class="go" href="https://github.com/Andres-pixel35/Statistics_on_Colombia">repo →</a></span></div>
       </div>
       <div class="wrow">
         <div class="wname mono"><strong>Anime Dashboard</strong><span class="status maintained">Maintained</span></div>

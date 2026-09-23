@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andres Rios — Analista de Datos</title>
-<meta name="description" content="Andres Rios, analista de datos en Colombia. Dashboards, pipelines y herramientas construidas desde cero a partir de datos gubernamentales — Statistics on Colombia, statsco.ai, y más.">
+<meta name="description" content="Andres Rios, analista de datos en Colombia. Dashboards, pipelines y herramientas construidas desde cero a partir de datos gubernamentales — StatsCo AI, Statistics on Colombia, y más.">
 <meta property="og:title" content="Andres Rios — Analista de Datos">
 <meta property="og:description" content="Dashboards, pipelines y herramientas construidas desde cero a partir de datos gubernamentales.">
 <meta property="og:type" content="website">
@@ -191,10 +191,10 @@ footer.colophon .accent { color: var(--text); }
       <a class="btn" href="#trabajo">Ver el trabajo ↓</a>
     </div>
     <div class="readout">
-      <div><div class="n mono">7</div><div class="l">proyectos publicados</div></div>
+      <div><div class="n mono">8</div><div class="l">proyectos publicados</div></div>
       <div><div class="n mono">4</div><div class="l">idiomas</div></div>
-      <div><div class="n mono">2</div><div class="l">dashboards en vivo</div></div>
-      <div><div class="n mono">1</div><div class="l">en desarrollo: statsco.ai</div></div>
+      <div><div class="n mono">3</div><div class="l">apps en vivo</div></div>
+      <div><div class="n mono">1</div><div class="l">app de IA: StatsCo AI</div></div>
     </div>
   </section>
 
@@ -204,30 +204,30 @@ footer.colophon .accent { color: var(--text); }
     <article class="flagship">
       <div class="flagship-head">
         <div class="flagship-brand">
-          <svg viewBox="0 0 148 145" role="img" aria-label="Logo de Statistics Colombia">
+          <svg viewBox="0 0 148 145" role="img" aria-label="Logo de StatsCo AI">
             <text x="34" y="121" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#173B6D">C</text>
             <text x="0" y="113" font-family="'Source Serif 4', serif" font-weight="700" font-size="145" fill="#4F82D8">S</text>
           </svg>
           <div class="fb-text">
-            <h3><a href="https://github.com/Andres-pixel35/Statistics_on_Colombia">Statistics on Colombia</a></h3>
-            <span class="sub">el buque insignia, en vivo, sigue creciendo</span>
+            <h3><a href="https://statscoai.streamlit.app/">StatsCo AI</a></h3>
+            <span class="sub">pregúntale a las estadísticas oficiales de Colombia en lenguaje natural</span>
           </div>
         </div>
         <span class="status live">En vivo</span>
       </div>
-      <p class="desc">Un dashboard bilingüe en Streamlit que unifica datos de PIB, IPC, pobreza, migración y población directamente desde archivos crudos del DANE / Banco de la República / Banco Mundial — un ETL a medida limpia cada dominio, y una capa compartida de Plotly renderiza comparaciones entre periodos presidenciales.</p>
-      <p class="proof-line mono"><span>en vivo →</span> <a href="https://statisticsoncolombia.streamlit.app" target="_blank" rel="noopener">statisticsoncolombia</a> <span> · marca:</span> <a href="https://www.instagram.com/statisticscolombia/" target="_blank" rel="noopener">@statisticscolombia</a></p>
+      <p class="desc">Un chat bilingüe: pregunta <em>“¿Cuál fue la tasa de desempleo en Antioquia en 2023?”</em> y responde con la cifra y sus fuentes. Un filtro con LLM valida la pregunta, embeddings eligen las tablas adecuadas y el modelo escribe SQL que se ejecuta en solo lectura sobre una base SQLite de 1,8 GB — reintentando si falla — y responde en texto, o con un gráfico de Plotly / mapa por departamento si se pide.</p>
+      <p class="proof-line mono"><span>en vivo →</span> <a href="https://statscoai.streamlit.app/" target="_blank" rel="noopener">statscoai</a> <span> · datos: DANE, Banco de la República, MinHacienda, World Bank</span></p>
       <div class="meta">
-        <div class="stack"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div>
-        <a class="go" href="https://github.com/Andres-pixel35/Statistics_on_Colombia">repo →</a>
+        <div class="stack"><span>Python</span><span>LLM</span><span>Text-to-SQL</span><span>sentence-transformers</span><span>SQLite</span><span>Streamlit</span><span>Plotly</span></div>
+        <a class="go" href="https://github.com/Andres-pixel35/statsco-ai">repo →</a>
       </div>
     </article>
 
     <div class="worklist">
       <div class="wrow">
-        <div class="wname mono"><strong>statsco.ai</strong><span class="status building">En desarrollo</span></div>
-        <div class="wdesc">Asistente RAG que responde preguntas sobre estadísticas colombianas en lenguaje sencillo, basado en los mismos datos gubernamentales — sin números inventados.</div>
-        <div class="wfoot"><div class="stack"><span>Python</span><span>RAG</span><span>Vector DB</span></div></div>
+        <div class="wname mono"><strong>Statistics on Colombia</strong><span class="status live">En vivo</span></div>
+        <div class="wdesc">Un dashboard bilingüe en Streamlit que unifica datos de PIB, IPC, pobreza, migración y población directamente desde archivos crudos del DANE / Banco de la República / Banco Mundial — un ETL a medida limpia cada dominio, y una capa compartida de Plotly renderiza comparaciones entre periodos presidenciales.</div>
+        <div class="wfoot"><div class="stack"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span></div><span><a class="go" href="https://statisticsoncolombia.streamlit.app" target="_blank" rel="noopener">en vivo →</a> <a class="go" href="https://www.instagram.com/statisticscolombia/" target="_blank" rel="noopener">@statisticscolombia</a> <a class="go" href="https://github.com/Andres-pixel35/Statistics_on_Colombia">repo →</a></span></div>
       </div>
       <div class="wrow">
         <div class="wname mono"><strong>Anime Dashboard</strong><span class="status maintained">Mantenido</span></div>
